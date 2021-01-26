@@ -5,11 +5,11 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.string :image
-      t.decimal :price, precision: 15, scale: 2
+      t.float :price, precision: 15, scale: 2
       t.integer :quantity
       t.string :category
       t.boolean :in_cart
-      t.integer :total
+      t.float :total, precision: 15, scale: 2
       t.integer :count
       t.timestamps
     end

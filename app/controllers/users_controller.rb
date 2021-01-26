@@ -52,6 +52,8 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :password, :email)
+      params.require(:user).permit(:name, :password, :email,
+      order_attributes: [:id, :user_id, :total_price, :date, :_destroy,
+        order_items_attributes: %i[id product_id order_id _destroy]])
     end
 end
