@@ -1,5 +1,6 @@
 class UserCartsController < ApplicationController
-  before_action :set_user_cart, only: [:show, :update, :destroy]
+  # before_action :set_user_cart, only: [:show, :update, :destroy]
+  skip_before_action :authorized, only: [:index, :show, :create]
 
   # GET /user_carts
   def index

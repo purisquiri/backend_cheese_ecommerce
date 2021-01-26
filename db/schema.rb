@@ -38,10 +38,12 @@ ActiveRecord::Schema.define(version: 2021_01_20_152643) do
     t.string "title"
     t.text "description"
     t.string "image"
-    t.decimal "price", precision: 15, scale: 2
+    t.float "price"
     t.integer "quantity"
     t.string "category"
     t.boolean "in_cart"
+    t.float "total"
+    t.integer "count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
