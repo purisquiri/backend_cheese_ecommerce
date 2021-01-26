@@ -9,8 +9,8 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :quantity
       t.string :category
       t.boolean :in_cart
-    
-     
+      t.integer :total
+      t.integer :count
       t.timestamps
     end
   end
