@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :orders
+  attributes :id, :name, :email, :password_digest, :orders
 
   def orders 
   ActiveModel::SerializableResource.new(object.orders, 
